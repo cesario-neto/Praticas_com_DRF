@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import BookShelf, ImportBookShelf
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from utils.gender_imports import gender_import
+from utils._imports import gender_import
 
 
 @admin.register(BookShelf)
