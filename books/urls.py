@@ -5,8 +5,8 @@ from . import views
 app_name = 'book'
 
 router = SimpleRouter()
-router.register('book', views.BookSerializerView)
-print(router.urls)
+router.register('books', views.BookSerializerView)
+router.register('authors', views.AuthorSerializerView)
 
 urlpatterns = [
     path('', include(router.urls))
