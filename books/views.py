@@ -8,9 +8,11 @@ class BookSerializerView(ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     http_method_names = 'get', 'post', 'head', 'options', 'patch',
+    permission_classes = IsAuthenticatedOrReadOnly,
 
 
 class AuthorSerializerView(ModelViewSet):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
     http_method_names = 'get', 'post', 'patch'
+    permission_classes = IsAuthenticatedOrReadOnly,
